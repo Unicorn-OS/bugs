@@ -12,3 +12,7 @@ sch: https://www.google.com/search?q=swtpm+at+%2Fusr%2Fbin%2Fswtpm+does+not+supp
 
 - https://discussion.fedoraproject.org/t/creating-new-vm-with-tpm-using-virt-manager-results-in-selinux-related-error/114917
 - https://discussion.fedoraproject.org/t/talk-cannot-launch-libvirt-virtual-machines-after-upgrade-to-fedora-40/114009
+
+## Solution:
+`fixfiles -R libvirt-daemon-driver-qemu,libvirt-daemon-log restore && systemctl restart virtqemud virtlogd`
+- [Comment 24](https://bugzilla.redhat.com/show_bug.cgi?id=2272971#c24)
