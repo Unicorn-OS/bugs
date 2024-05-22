@@ -14,5 +14,10 @@ sch: https://www.google.com/search?q=swtpm+at+%2Fusr%2Fbin%2Fswtpm+does+not+supp
 - https://discussion.fedoraproject.org/t/talk-cannot-launch-libvirt-virtual-machines-after-upgrade-to-fedora-40/114009
 
 ## Solution:
+works: false
 `fixfiles -R libvirt-daemon-driver-qemu,libvirt-daemon-log restore && systemctl restart virtqemud virtlogd`
 - [Comment 24](https://bugzilla.redhat.com/show_bug.cgi?id=2272971#c24)
+
+### Disable SELinux
+works: true
+https://docs.fedoraproject.org/en-US/quick-docs/selinux-changing-states-and-modes/
